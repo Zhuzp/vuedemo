@@ -30,10 +30,12 @@
     created() {
       this.$http.get('/news/index').then(response => {
         // get body data
+        
         console.log(response.body)
         this.seller = Object.assign({}, this.seller, response.body)
       }, response => {
         // error callback
+
       })
     },
     components: {
