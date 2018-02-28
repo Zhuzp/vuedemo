@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="photo">
-      {{seller}}
+      <img :src="seller.seller.imgUrl" alt="">
     </div>
     <div class="name">
-
+      {{seller.seller.name}}
     </div>
     <div class="description">
 
@@ -19,6 +19,7 @@
     export default {
         props:["seller"]
     }
+
 </script>
 
 <style scoped>

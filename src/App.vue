@@ -24,15 +24,13 @@
   export default {
     data() {
       return {
-        seller: 'seller'
+        seller: {}
       }
     },
     created() {
       this.$http.get('/news/index').then(response => {
-        // get body data
-        
-        console.log(response.body)
-        this.seller = Object.assign({}, this.seller, response.body)
+        this.seller = response.body;
+        console.log(this.seller)
       }, response => {
         // error callback
 
@@ -44,6 +42,6 @@
   }
 </script>
 
-<style>
+<style class="">
 
 </style>

@@ -25,6 +25,8 @@ const Mock = require('mockjs');
 // //Mock.mock(url ,post/get , 返回的数据)
 // Mock.mock('/news.index', 'post', produceNewsData())
 
+let Random = Mock.Random;
+
 Mock.mock('/news/index',{
   "seller": {
     "name": "@cname",
@@ -38,7 +40,8 @@ Mock.mock('/news/index',{
     "deliveryPrice|1-9": 0,
     "ratingCount|1-100.1": 0,
     "sellCount|1-100": 0,
-    "bulletin": "@csentence"
+    "bulletin": "@csentence",
+    "imgUrl": Random.image('40x40', '#50B347', '#FFF', 'Mock.js'),
     // "supports": [
     //   {
     //     "type": 0,
