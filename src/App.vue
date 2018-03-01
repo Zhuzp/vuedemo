@@ -42,6 +42,6 @@
   }
 </script>
 
-<style class="sass">
+<style>
 
 </style>
